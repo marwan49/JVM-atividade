@@ -22,10 +22,11 @@ public class Aplication{
 		BurguerX.setCadastro(cadBurguerX);
 		Endereco endBurguerX = new Endereco();
 		endBurguerX.setCep("03246056");
-		endBurguerX.setRua("rua Algumaa coisa");
+		endBurguerX.setRua("Av Ipiranga");
 		endBurguerX.setNumero(466);
+		endBurguerX.setBairro("Republica");
 		endBurguerX.setCidade("São Paulo");
-		endBurguerX.setEstado("São paulo");
+		endBurguerX.setEstado("Sp");
 		endBurguerX.setPais("Brasil");
 		cadBurguerX.setEndereco(endBurguerX);
 		Cardapio carBurguerX = new Cardapio();
@@ -45,7 +46,7 @@ public class Aplication{
 		endCliente.setRua("rua Algum lugar");
 		endCliente.setNumero(66);
 		endCliente.setCidade("São Paulo");
-		endCliente.setEstado("São paulo");
+		endCliente.setEstado("Sp");
 		endCliente.setPais("Brasil");
 		cliente.setEndereco(endCliente);
 		
@@ -65,6 +66,8 @@ public class Aplication{
 		p1.setEmpresa(BurguerX);
 		p1.setCcf(123456);
 		p1.setCoo(654321);
+		
+		Recibo.imprimirPedido(p1);
 		
 	}
 }

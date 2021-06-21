@@ -6,10 +6,17 @@ public class Endereco {
 	private String rua;
 	private Integer numero;
 	private String complemento;
+	private String bairro;
 	private String cidade;
 	private String estado;
 	private String pais;
 	
+	public String getBairro() {
+		return bairro;
+	}
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
 	public Cadastro getCadastro() {
 		return cadastro;
 	}
