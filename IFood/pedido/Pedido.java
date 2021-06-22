@@ -1,12 +1,14 @@
 package IFood.pedido;
 
+import java.util.Date;
+
 import IFood.cadastro.Cadastro;
 import IFood.cadastro.Empresa;
 
 public class Pedido {
 
 	private Integer id;
-	private String data;
+	private Date data;
 	private Double valorTotal;
 	private Cadastro comprador;
 	private Empresa empresa;
@@ -19,10 +21,10 @@ public class Pedido {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String getData() {
+	public Date getData() {
 		return data;
 	}
-	public void setData(String data) {
+	public void setData(Date data) {
 		this.data = data;
 	}
 	public Double getValorTotal() {

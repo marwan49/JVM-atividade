@@ -1,5 +1,7 @@
 package IFood;
 
+import java.sql.Date;
+
 import IFood.cadastro.Cadastro;
 import IFood.pedido.Pedido;
 import IFood.pedido.PedidoItem;
@@ -8,11 +10,12 @@ import IFood.cadastro.Empresa;
 import IFood.cadastro.Endereco;
 
 public class Aplication{
+	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
 
 		Empresa BurguerX = new Empresa();
-		BurguerX.setIe(1234567L);
-		BurguerX.setIm(7654321L);
+		BurguerX.setIe(123456789L);
+		BurguerX.setIm(87654321L);
 		Cadastro cadBurguerX = new Cadastro();
 		cadBurguerX.setId(896547);
 		cadBurguerX.setNome("BurguerX lanches");
@@ -23,7 +26,7 @@ public class Aplication{
 		Endereco endBurguerX = new Endereco();
 		endBurguerX.setCep("03246056");
 		endBurguerX.setRua("Av Ipiranga");
-		endBurguerX.setNumero(466);
+		endBurguerX.setNumero("466");
 		endBurguerX.setBairro("Republica");
 		endBurguerX.setCidade("São Paulo");
 		endBurguerX.setEstado("Sp");
@@ -44,7 +47,7 @@ public class Aplication{
 		Endereco endCliente = new Endereco();
 		endCliente.setCep("12346056");
 		endCliente.setRua("rua Algum lugar");
-		endCliente.setNumero(66);
+		endCliente.setNumero("66");
 		endCliente.setCidade("São Paulo");
 		endCliente.setEstado("Sp");
 		endCliente.setPais("Brasil");
@@ -60,12 +63,12 @@ public class Aplication{
 		pi1.setQuantidade(3);
 		Pedido p1 = new Pedido();
 		p1.setId(100200);
-		p1.setData("23.10.2001");
+		p1.setData(new Date(23,10,2001));
 		p1.setValorTotal(pi1.getValorTotal());
 		p1.setComprador(cliente);
 		p1.setEmpresa(BurguerX);
-		p1.setCcf(123456);
-		p1.setCoo(654321);
+		p1.setCcf(30);
+		p1.setCoo(458);
 		
 		Recibo.imprimirPedido(p1);
 		

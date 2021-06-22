@@ -4,7 +4,7 @@ public class Endereco {
 	private Cadastro cadastro;
 	private String cep;
 	private String rua;
-	private Integer numero;
+	private String numero;
 	private String complemento;
 	private String bairro;
 	private String cidade;
@@ -35,10 +35,10 @@ public class Endereco {
 	public void setRua(String rua) {
 		this.rua = rua;
 	}
-	public Integer getNumero() {
+	public String getNumero() {
 		return numero;
 	}
-	public void setNumero(Integer numero) {
+	public void setNumero(String numero) {
 		this.numero = numero;
 	}
 	public String getComplemento() {
